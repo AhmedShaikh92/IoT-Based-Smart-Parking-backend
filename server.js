@@ -18,7 +18,7 @@ app.use(express.json());
 
 //ping to prevent idling on Render
 setInterval(() => {
-  fetch('https://pc-builder-backend-1w1d.onrender.com/api/health')
+  fetch('https://iot-based-smart-parking-backend.onrender.com/health')
 }, 5 * 60 * 1000); // Every 5 minutes
 
 // Routes

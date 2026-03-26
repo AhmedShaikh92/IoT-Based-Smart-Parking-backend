@@ -16,6 +16,11 @@ const PORT = process.env.PORT || 5000;
 app.use(cors());
 app.use(express.json());
 
+//ping to prevent idling on Render
+setInterval(() => {
+  fetch('https://pc-builder-backend-1w1d.onrender.com/api/health')
+}, 5 * 60 * 1000); // Every 5 minutes
+
 // Routes
 app.use('/auth', authRoutes);
 app.use('/slots', slotRoutes);

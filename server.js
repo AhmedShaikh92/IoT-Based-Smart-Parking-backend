@@ -13,10 +13,7 @@ const app = express();
 const PORT = process.env.PORT || 5000;
 
 // Middleware
-app.use(cors({
-  origin: 'https://iot-based-smart-parking.vercel.app',
-  credentials: true
-}));
+app.use(cors());
 app.use(express.json());
 
 //ping to prevent idling on Render
